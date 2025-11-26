@@ -8,7 +8,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 
 @HiltViewModel
-class MainViewModel @Inject constructor() : ViewModel() {
+class MainActivityViewModel @Inject constructor() : ViewModel() {
     private val _themeColor = MutableStateFlow(SunThemeMode.DARK)
     val themeColor = _themeColor.asStateFlow()
 

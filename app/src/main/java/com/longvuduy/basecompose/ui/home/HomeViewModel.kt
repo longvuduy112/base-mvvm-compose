@@ -1,4 +1,4 @@
-package com.longvuduy.basecompose.ui
+package com.longvuduy.basecompose.ui.home
 
 import androidx.compose.runtime.Immutable
 import androidx.lifecycle.viewModelScope
@@ -15,7 +15,7 @@ import kotlinx.coroutines.launch
 
 
 @Immutable
-data class MainScreenState(
+data class HomeState(
     val isLoading: Boolean = false,
     val errorMessage: String? = null,
     val inputPhoneNumber: String = "",
@@ -24,9 +24,9 @@ data class MainScreenState(
 ) : BaseViewState
 
 @HiltViewModel
-class MainScreenViewModel @Inject constructor(private val phoneValidationRepository: PhoneValidationRepository) : BaseViewModel<MainScreenState>() {
-    private val _state = MutableStateFlow(MainScreenState())
-    override val viewState: StateFlow<MainScreenState> = _state.asStateFlow()
+class MainScreenViewModel @Inject constructor(private val phoneValidationRepository: PhoneValidationRepository) : BaseViewModel<HomeState>() {
+    private val _state = MutableStateFlow(HomeState())
+    override val viewState: StateFlow<HomeState> = _state.asStateFlow()
 
     fun onInputPhoneNumberChange(input: String) {
         _state.update {

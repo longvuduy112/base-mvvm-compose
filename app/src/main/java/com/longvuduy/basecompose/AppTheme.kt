@@ -17,8 +17,8 @@ import com.longvuduy.basecompose.base.ui.theme.SunThemeMode
 
 @Composable
 fun AppTheme(
-    viewModel: MainViewModel = hiltViewModel(),
-    content: @Composable (MainViewModel) -> Unit
+    viewModel: MainActivityViewModel = hiltViewModel(),
+    content: @Composable (MainActivityViewModel) -> Unit
 ) {
     val theme by viewModel.themeColor.collectAsState()
 

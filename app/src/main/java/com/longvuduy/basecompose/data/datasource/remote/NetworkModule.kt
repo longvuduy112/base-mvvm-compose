@@ -52,5 +52,4 @@ object NetworkModule {
     @Singleton
     fun provideBlockCallService(@PhoneValidationRetrofit retrofit: Retrofit): PhoneValidationService =
         retrofit.create(PhoneValidationService::class.java)
-
 }
