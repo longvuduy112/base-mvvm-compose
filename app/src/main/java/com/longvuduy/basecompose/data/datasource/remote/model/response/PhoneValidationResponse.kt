@@ -2,6 +2,8 @@ package com.longvuduy.basecompose.data.datasource.remote.model.response
 
 import com.google.gson.annotations.SerializedName
 
+// Move this file to: data/model/remote/response/PhoneValidationResponse.kt
+
 data class PhoneValidationResponse(
     @SerializedName("valid")
     val valid: Boolean? = null,

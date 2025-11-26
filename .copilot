@@ -1,0 +1,47 @@
+This is an Android project using MVVM architecture with Jetpack Compose.
+
+GENERAL RULES
+- Follow MVVM strictly.
+- Do NOT put business logic in Activities or Composables.
+- All business logic must live in ViewModel or Domain layer.
+- Prefer immutability and unidirectional data flow.
+
+ARCHITECTURE
+- UI layer: Jetpack Compose only.
+- State is exposed from ViewModel via StateFlow.
+- UI observes state and renders only.
+- Events from UI are sent to ViewModel via functions or UiEvent.
+
+NAMING CONVENTIONS
+- ViewModel classes must end with ViewModel.
+- UI state classes must end with UiState.
+- UI events must be sealed classes named UiEvent.
+- Repositories must end with Repository.
+
+COMPOSE GUIDELINES
+- Prefer stateless composables.
+- Hoist state to ViewModel.
+- Avoid remember {} for business state.
+- Use Scaffold for screen-level composables.
+- Side effects must use LaunchedEffect or SideEffect properly.
+
+PACKAGE STRUCTURE
+- Organize code by feature, not by layer.
+- Each feature should contain:
+  - ui/
+  - viewmodel/
+  - repository/
+
+CODE STYLE
+- Prefer Kotlin Coroutines + Flow.
+- Avoid LiveData unless necessary.
+- Avoid mutable public state.
+- Use data classes for UI state.
+
+DO NOT SUGGEST
+- XML layouts
+- MVP or MVC patterns
+- Business logic inside Composables
+- Direct repository calls from UI
+
+This project ignores generated and IDE files such as build outputs and .idea files.

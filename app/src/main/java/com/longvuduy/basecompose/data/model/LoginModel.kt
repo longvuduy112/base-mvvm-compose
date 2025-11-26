@@ -2,6 +2,8 @@ package com.longvuduy.basecompose.data.model
 
 import com.longvuduy.basecompose.data.datasource.remote.model.response.LoginResponse
 
+// Move this file to: data/model/domain/LoginModel.kt
+
 class LoginModel(
     val data: LoginData? = null,
 ) {
@@ -24,11 +26,3 @@ fun LoginModel.toUserToken() = data?.let {
         refreshToken = it.refreshToken
     )
 }
-
-
-
-
-
-
-
-
